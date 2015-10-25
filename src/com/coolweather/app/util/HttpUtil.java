@@ -28,6 +28,7 @@ public class HttpUtil {
 					while ((line = bufferedReader.readLine()) != null) {
 						response.append(line);
 					}
+					LogUtil.d(TAG, address);
 					LogUtil.d(TAG, response.toString());
 					if (listener != null) {
 						listener.onFinish(response.toString());
